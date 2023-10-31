@@ -1,0 +1,53 @@
+*{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    font-family: 'Roboto', sans-serif;
+    background: #fceabb;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.container{
+    /* El display flex se coloca en el padre y define el comportamiento de los hios. Estos se comportan de forma flexible ocupando el largo de la pantalla sin salto de linea */
+    width: 400px;
+    height: 400px;
+    border: solid 1px  #fceabb;
+    border-radius: 20px 20px;
+    box-sizing: border-box;
+   /*  position: fixed; */ /* Lo que hace es dejar fijo el contenido con respecto a la pantallla */
+   /* position: sticky;*/ /* Lo que hace es dejar fijo el contenido con respecto al padre */ 
+   position: relative; /* Lo que hace es crear un punto relativo para que los hijos tomen como referencia */
+}
+.content{
+    /* La Posicion absoluta nos permite determinar la posicion  mediante el uso de coordenadas */
+    position: absolute; /* Lo hace tomando como referencia el documento o del padre si es que el padre tiene position relative*/
+    /* Mediante el uso de coordenadas determinamos la posicion de la caja */
+    /* En la siguiente instruccion la caja se posiciona en la ezquina superior izquierda*/
+    /* y comieza a moverse de derecha a izquierda. Hay que tener en cuenta que gracias a la posicion absoluta */
+    /* comienza a moverse desde 0px */
+   /*  top: 0;
+    right: 50px;  *//* Con esta instruccion le decimos que queremos que se mueva 50 px desde la posicion mas a la derecha ose la posicion 0px de la derecha por eso notamos que se mueve hacia la izquierda */
+    box-shadow: 2px 5px 5px #fceabb;
+   /* centrar un div :) forma no recomendada */
+    /*  top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; */
+/* tambien se utiliza para centrar divs */
+    inset: 0;
+    margin: auto;
+    background-color:  #f8b500;
+    width: 100px;
+    height: 100px;
+    border: solid 1px  #f8b500;
+    border-radius: 20px 20px;
+
+
+    /* Contexto de apilamiento: el elemento raiz crea el contexto de apilamiento */
+    /* en css hay un eje z, cuando se crea el contexto de apilamiento https://developer.mozilla.org/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context */
+
+
+
+
+}
